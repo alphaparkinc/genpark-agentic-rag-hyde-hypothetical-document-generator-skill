@@ -1,0 +1,33 @@
+{
+  "name": "genpark-agentic-rag-hyde-hypothetical-document-generator-skill",
+  "version": "1.0.0",
+  "description": "Agentic RAG HyDE (Hypothetical Document Embeddings) Query Expander. Bridges dense lexical and semantic gaps by generating diverse hypothetical answer passages from sparse user queries to dramatically boost vector search recall.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "generate_hypothetical_passages",
+      "description": "Synthesize hypothetical answer passages across multiple perspectives for zero-shot RAG retrieval.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Short or sparse user search query."
+          },
+          "domain": {
+            "type": "string",
+            "description": "Domain context (e.g., medical, finance, e-commerce, devops)."
+          },
+          "perspectives_count": {
+            "type": "integer",
+            "description": "Number of hypothetical passages to synthesize."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ]
+}
